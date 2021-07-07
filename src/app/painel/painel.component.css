@@ -6,6 +6,13 @@
     border-radius: .3rem;
   }
 
-h6{
-  margin-top: 30px;
+h5{
+  margin-top: 15px;
+}
+p{
+  font-style: italic;
+  font-size: 20px;
+}
+.d-flex{
+  margin-top: 20px;
 }
