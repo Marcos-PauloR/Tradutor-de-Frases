@@ -11,37 +11,42 @@ export class PainelComponent implements OnInit {
 
   public frases: Frase[] = FRASES
   public instrucao: string = "Traduza a Frase: "
-  public resposta! : string
-
+  public resposta : string = ''
+  public progresso: number=0
   public rodada:number =0
-  public rodadaFrase: Frase
+  public rodadaFrase!: Frase
+  public tentativas: number = 3
   
   constructor() { 
-    this.rodadaFrase = this.frases[this.rodada]
-    console.log(this.frases)
-  
+    this.atualizaRodada()  
   }
-
-
   ngOnInit(): void {
   }
 
   public atualizaResposta(resposta: Event):void {
     this.resposta =(<HTMLInputElement>resposta.target).value
-    console.log(this.resposta)
   }
 
   public verificaResposta(): void {
 
     if(this.rodadaFrase.frasePtBr==this.resposta){
+      alert('Tradução está Correta')
       this.rodada++
-      console.log(this.rodada)
-      this.rodadaFrase=this.frases[this.rodada]
-      console.log(this.rodadaFrase)
+      this.progresso=this.progresso+(100/this.frases.length)
+      this.atualizaRodada()
+
     }else{
-      console.log('Resposta Errada!')
+      this.tentativas--
+      if(this.tentativas === -1){
+        alert('Você perdeu Todas as Tentativas')
+      }
     }
 
+  }
+
+  public atualizaRodada(): void{
+    this.rodadaFrase = this.frases[this.rodada]
+    this.resposta=""
   }
 
 }
