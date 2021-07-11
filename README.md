@@ -1,9 +1,8 @@
-<<<<<<< HEAD
-#App1
 
-Projeto de tradução de frases 
+    Projeto de tradução de frases 
 =======
-Projeto Teste
 
-primeiro projeto Angular
->>>>>>> 51167792a7d19aa307281924db05ebbe2da3d13d
+Projeto simples usando angular:
+    Tradutor de frases En-PtBr 
+    3 Tentativas para acertar
+    Com 4 frases acertada ganha o jogo
