@@ -1,5 +1,4 @@
-
-    Projeto de tradução de frases 
+Projeto de tradução de frases 
 =======
 
 Projeto simples usando angular:
